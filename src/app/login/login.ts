@@ -33,8 +33,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       // Perform authentication logic here, e.g., call an authentication service
       console.log('Login data:', this.loginForm.value);
-      // Redirect to a dashboard or home page on successful login
-      this.router.navigate(['/']);
+      this.router.navigate(['/'], this.loginForm.value.username);
     }
   }
 }
